@@ -27,22 +27,6 @@ function operate(a, b, operation) {
     }
 }
 
-function showDisplay(){
-    display.textContent = '';
-    buttons.forEach(button => {
-        button.addEventListener('click', () => {
-            if (button.textContent === '=') {
-                calculate();
-                // display.textContent = result;
-            } else if (button.textContent === 'clear') {
-                display.textContent = '';
-            } else {
-                display.textContent += button.textContent;
-            }
-        });
-    });
-}
-
 function calculate() {
     const input = display.textContent;
     let currentNum = '';
